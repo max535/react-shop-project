@@ -5,11 +5,13 @@ import { Preloader } from "./Preloader";
 import { Cart } from "./Cart";
 
 import { API_KEY, API_URL } from '../config';
+import { BasketList } from "./BasketList";
 
 export function Shop() {
     const [goods, setGoods] = useState([]);
     const [lodaing, setLoading] = useState(true);
     const [order, setOrder] = useState([]);
+    const [isBasketShow, setBasketShow] = useState(false);
 
     const addToBasket = (item) => {
         const itemIndex = order.findIndex(orderItem => orderItem.id === item.id);
@@ -36,6 +38,10 @@ export function Shop() {
         }
     };
 
+    const handleBasketShow = () => {
+        setBasketShow(!isBasketShow);
+    };
+
     useEffect(function getGoods() {
         fetch(API_URL, {
             headers: {
@@ -51,8 +57,18 @@ export function Shop() {
 
     return (
         <main className="container content">
-            <Cart quanitity={order.length} />
-            {lodaing ? <Preloader /> : <GoodsList goods={goods} addToBasket={addToBasket} />}
+            <Cart quanitity={order.length} handleBasketShow={handleBasketShow} />
+            {lodaing ? (
+                <Preloader />
+            ) : (
+                    <GoodsList goods={goods} addToBasket={addToBasket} />
+            )}
+            {isBasketShow && (
+                <BasketList 
+                    order={order} 
+                    handleBasketShow={handleBasketShow}
+                />
+            )}
         </main>
     );
 }
