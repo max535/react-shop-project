@@ -38,6 +38,11 @@ export function Shop() {
         }
     };
 
+    const removeFromBasket = (itemId) => {
+        const newOrder = order.filter(el => el.id != itemId);
+        setOrder(newOrder);
+    };
+
     const handleBasketShow = () => {
         setBasketShow(!isBasketShow);
     };
@@ -67,6 +72,7 @@ export function Shop() {
                 <BasketList 
                     order={order} 
                     handleBasketShow={handleBasketShow}
+                    removeFromBasket={removeFromBasket}
                 />
             )}
         </main>

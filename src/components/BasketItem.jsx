@@ -1,13 +1,17 @@
-export function BasketItem ({
+export function BasketItem({
     id,
     name,
     price,
-    quantity,
+    quanitity,
+    removeFromBasket = Function.prototype,
 }) {
     return (
         <li className="collection-item">
-            {name} x{quantity} = {price}
-            <span className="secondary-content">
+            {name} x{quanitity} = {price * quanitity} руб.
+            <span
+                className="secondary-content"
+                onClick={() => removeFromBasket(id)}
+            >
                 <i className="material-icons basket-delete">close</i>
             </span>
         </li>
