@@ -14,7 +14,7 @@
   <img alt="css" src="https://shields.io/badge/-CSS3-1572B6?logo=css3&style=for-the-badge&logoColor=fff" />
 </p>
 
-### Для запуска проекта напишите следующие команды:
+## Запуск проекта ⏯
 
 + ```yarn install``` или ```npm install```
 + ```yarn start``` или ```npm start```
