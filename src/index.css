@@ -72,7 +72,8 @@ nav {
     cursor: pointer;
 }
 
-.basket-quantity, .basket-delete {
+.basket-quantity,
+.basket-delete {
     cursor: pointer;
     vertical-align: middle;
     color: #1E88E5;
