@@ -1,6 +1,6 @@
 export function Header() {
     return (
-        <nav className="green darken-1">
+        <nav className="blue darken-1">
             <div className="nav-wrapper">
                 <a href="!#" className="brand-logo">
                     React Shop
@@ -8,7 +8,7 @@ export function Header() {
                 <ul id="nav-mobile" className="right hide-on-med-and-down">
                     <li>
                         <a
-                            href="https://github.com/max535/react-movies"
+                            href="https://github.com/max535/react-shop-project"
                             target="_blank"
                             rel="noopener noreferrer"
                         >

@@ -17,7 +17,7 @@ export function GoodsItem({
             </div>
             <div className="card-action">
                 <button
-                    className="btn"
+                    className="btn blue darken-1"
                     onClick={() => addToBasket({ id, name, price })}
                 >
                     Купить
