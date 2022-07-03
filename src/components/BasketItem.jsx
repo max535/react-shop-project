@@ -10,11 +10,17 @@ export function BasketItem({
     return (
         <li className="collection-item">
             {name}
-            <i className="material-icons basket-quantity" onClick={() => decQuantity(id)}>
+            <i
+                className="material-icons basket-quantity"
+                onClick={() => decQuantity(id)}
+            >
                 remove
             </i>
             x{quanitity}
-            <i className="material-icons basket-quantity" onClick={() => incQuantity(id)}>
+            <i
+                className="material-icons basket-quantity"
+                onClick={() => incQuantity(id)}
+            >
                 add
             </i>
             = {price * quanitity} руб.

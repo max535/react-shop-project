@@ -3,9 +3,9 @@ import { useEffect, useState } from "react";
 import { GoodsList } from "./GoodsList";
 import { Preloader } from "./Preloader";
 import { Cart } from "./Cart";
-
-import { API_KEY, API_URL } from '../config';
 import { BasketList } from "./BasketList";
+
+import { API_KEY, API_URL } from "../config";
 
 export function Shop() {
     const [goods, setGoods] = useState([]);
@@ -14,13 +14,15 @@ export function Shop() {
     const [isBasketShow, setBasketShow] = useState(false);
 
     const addToBasket = (item) => {
-        const itemIndex = order.findIndex(orderItem => orderItem.id === item.id);
+        const itemIndex = order.findIndex(
+            (orderItem) => orderItem.id === item.id
+        );
 
         if (itemIndex < 0) {
             const newItem = {
                 ...item,
                 quanitity: 1,
-            }
+            };
             setOrder([...order, newItem]);
         } else {
             const newOrder = order.map((orderItem, index) => {
@@ -39,7 +41,7 @@ export function Shop() {
     };
 
     const removeFromBasket = (itemId) => {
-        const newOrder = order.filter(el => el.id != itemId);
+        const newOrder = order.filter((el) => el.id != itemId);
         setOrder(newOrder);
     };
 
@@ -48,7 +50,7 @@ export function Shop() {
     };
 
     const incQuantity = (itemId) => {
-        const newOrder = order.map(el => {
+        const newOrder = order.map((el) => {
             if (el.id === itemId) {
                 const newQuanity = el.quanitity + 1;
                 return {
@@ -63,7 +65,7 @@ export function Shop() {
     };
 
     const decQuantity = (itemId) => {
-        const newOrder = order.map(el => {
+        const newOrder = order.map((el) => {
             if (el.id === itemId) {
                 const newQuanity = el.quanitity - 1;
                 return {
@@ -92,15 +94,18 @@ export function Shop() {
 
     return (
         <main className="container content">
-            <Cart quanitity={order.length} handleBasketShow={handleBasketShow} />
+            <Cart
+                quanitity={order.length}
+                handleBasketShow={handleBasketShow}
+            />
             {lodaing ? (
                 <Preloader />
             ) : (
-                    <GoodsList goods={goods} addToBasket={addToBasket} />
+                <GoodsList goods={goods} addToBasket={addToBasket} />
             )}
             {isBasketShow && (
-                <BasketList 
-                    order={order} 
+                <BasketList
+                    order={order}
                     handleBasketShow={handleBasketShow}
                     removeFromBasket={removeFromBasket}
                     incQuantity={incQuantity}

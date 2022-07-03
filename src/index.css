@@ -43,9 +43,7 @@ nav {
     }
 }
 
-.cart-quantity {
-    
-}
+.cart-quantity {}
 
 .basket-list {
     position: fixed;
@@ -85,6 +83,7 @@ nav {
         top: 70%;
         opacity: 0;
     }
+
     to {
         top: 50%;
         opacity: 1;
