@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/max535.github.io/react-shop-project/static/css/main.00e14efd.css",
+    "main.js": "/max535.github.io/react-shop-project/static/js/main.f9918a26.js",
+    "index.html": "/max535.github.io/react-shop-project/index.html",
+    "main.00e14efd.css.map": "/max535.github.io/react-shop-project/static/css/main.00e14efd.css.map",
+    "main.f9918a26.js.map": "/max535.github.io/react-shop-project/static/js/main.f9918a26.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.00e14efd.css",
+    "static/js/main.f9918a26.js"
+  ]
+}
