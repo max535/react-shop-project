@@ -5,7 +5,7 @@
 #### Для вывода товаров используется открытая база данных FortniteApi: https://fortniteapi.io/
 
 
-![vaser-video-Gif](https://user-images.githubusercontent.com/49311021/177057442-10fe7605-b846-41d8-b301-a598fe18870e.gif)
+![react-shop-Gif](https://user-images.githubusercontent.com/49311021/177057442-10fe7605-b846-41d8-b301-a598fe18870e.gif)
 
 
 <h3>Технологии проекта</h3>
